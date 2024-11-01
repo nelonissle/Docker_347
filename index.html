@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Ticket System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>SUPPORT CENTER</h1>
+        <p>Ege Ulu - Support Ticket System</p>
+        <nav class="navbar">
+            <a href="#">Support-Center-Startseite</a>
+            <a href="#">Neues Ticket eröffnen</a>
+            <a href="#">Ticket-Status überprüfen</a>
+        </nav>
+    </header>
+
+    <h2>Neues Ticket eröffnen</h2>
+    <p>Bitte füllen Sie das Formular vollständig aus.</p>
+
+    <form id="ticketForm">
+        <section class="contact-info">
+            <label for="email">E-Mail-Adresse <span class="required">*</span></label>
+            <input type="email" id="email" placeholder="Ihre E-Mail-Adresse" required>
+
+            <label for="name">Vollständiger Name <span class="required">*</span></label>
+            <input type="text" id="name" placeholder="Ihr vollständiger Name" required>
+
+            <label for="phone">Telefonnummer</label>
+            <input type="tel" id="phone" placeholder="Telefonnummer eingeben">
+            
+            <label for="phone">Erw:</label>
+            <input type="tel" id="phone" placeholder="">
+        </section>
+
+        <label for="topic">Hilfethema</label>
+        <select id="topic" required>
+            <option value="">-- Hilfethema auswählen --</option>
+            <option value="other">Anderes Problem melden</option>
+            <option value="beamer">Beamer</option>
+            <option value="feedback">Feedback</option>
+            <option value="hardware">HARDWARE</option>
+            <option value="hellraumprojektor">Hellraumprojektor</option>
+            <option value="login-mediathek">Login (Mediathek)</option>
+            <option value="login-schulnetz">Login (Schulnetz)</option>
+            <option value="login-www">Login (www.schulen.ch)</option>
+            <option value="software">SOFTWARE</option>
+            <option value="visualizer">Visualizer</option>
+        </select>
+
+        <div class="captcha-section">
+            <div class="captcha">
+                <span id="captchaCode" class="captcha-code"></span>
+                <button type="button" onclick="generateCaptcha()">Captcha erneuern</button>
+            </div>
+            <label for="captchaInput">Geben Sie den Text aus dem CAPTCHA ein:</label>
+            <input type="text" id="captchaInput" placeholder="CAPTCHA eingeben" required>
+        </div>
+
+        <div class="buttons">
+            <button type="submit" class="submit-btn">Ticket eröffnen</button>
+            <button type="reset" class="reset-btn">Zurücksetzen</button>
+            <button type="button" class="cancel-btn" onclick="cancelTicket()">Abbrechen</button>
+        </div>
+    </form>
+
+    <footer>
+        <p>Copyright © 2022 Helpdesk Ege - All rights reserved.</p>
+        <p>powered by EgeTicket</p>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
