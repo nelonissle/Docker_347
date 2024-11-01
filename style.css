@@ -83,13 +83,38 @@ label {
 
 input[type="text"],
 input[type="email"],
-input[type="tel"],
-select {
+select,
+textarea {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+/* Styling for the Nachrichten (Message) section */
+.message-section {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.message-section label {
+    font-weight: bold;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.message-section textarea {
+    width: 100%;
+    max-width: 500px; /* Adjust width as needed */
+    max-height: 100px;
+    min-height: 20px;
+    height: 25px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical; /* Allow vertical resizing only */
 }
 
 .captcha-section {
